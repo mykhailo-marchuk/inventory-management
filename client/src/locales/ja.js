@@ -6,6 +6,7 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '補充発注',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
   },
@@ -125,8 +126,15 @@ export default {
       totalValue: '合計金額',
       status: 'ステータス',
       expectedDelivery: '予定配達日',
-      actualDelivery: '実際の配達日'
-    }
+      actualDelivery: '実際の配達日',
+      submittedAt: '発注日',
+      totalCost: '合計費用',
+      leadTime: 'リードタイム'
+    },
+    submittedOrders: '発注済みの補充注文',
+    submittedOrdersDescription: '補充発注タブから発注された注文です。このセクションにはフィルターは適用されません。',
+    noSubmittedOrders: '発注済みの補充注文はまだありません。',
+    leadTimeDays: '{days}日'
   },
 
   // Finance/Spending
@@ -188,6 +196,42 @@ export default {
     }
   },
 
+  // Restocking
+  restocking: {
+    title: '補充発注',
+    description: '予算を設定し、予測不足が最も大きい品目を補充します',
+    budget: '利用可能な予算',
+    budgetHint: '予算がなくなるまで緊急度の高い順に品目を割り当てます。除外する品目はチェックを外してください。',
+    allocated: '割当額',
+    remaining: '残額',
+    itemsSelected: '発注品目数',
+    fullRestockCost: '全品目の補充費用: {amount}',
+    recommendations: '推奨品目',
+    noRecommendations: 'すべての予測品目に次期分の十分な在庫があります。',
+    placeOrder: '発注する',
+    placingOrder: '発注中...',
+    orderPlaced: '注文 {orderNumber} を発注しました。{days}日後に配達予定です。',
+    viewInOrders: '注文で表示',
+    orderFailed: '注文を送信できませんでした。もう一度お試しください。',
+    loadFailed: '補充の推奨品目を読み込めませんでした。',
+    notInBudget: '予算外',
+    leadTimeDays: '{days}日',
+    table: {
+      include: '対象',
+      item: '品目',
+      category: 'カテゴリ',
+      trend: 'トレンド',
+      onHand: '在庫数',
+      onOrder: '発注済み数',
+      forecast: '予測',
+      recommended: '推奨数',
+      allocated: '発注数',
+      unitCost: '単価',
+      lineCost: '小計',
+      leadTime: 'リードタイム'
+    }
+  },
+
   // Filters
   filters: {
     timePeriod: '期間',
@@ -206,7 +250,8 @@ export default {
     backordered: 'バックオーダー',
     inStock: '在庫あり',
     lowStock: '在庫僅少',
-    adequate: '適量'
+    adequate: '適量',
+    submitted: '発注済み'
   },
 
   // Trends
@@ -229,7 +274,11 @@ export default {
     sensors: 'センサー',
     actuators: 'アクチュエータ',
     controllers: 'コントローラー',
-    powerSupplies: '電源'
+    powerSupplies: '電源',
+    mechanicalParts: '機械部品',
+    motors: 'モーター',
+    filtration: 'ろ過装置',
+    valves: 'バルブ'
   },
 
   // Spending Categories

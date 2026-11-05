@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -125,8 +126,15 @@ export default {
       totalValue: 'Total Value',
       status: 'Status',
       expectedDelivery: 'Expected Delivery',
-      actualDelivery: 'Actual Delivery'
-    }
+      actualDelivery: 'Actual Delivery',
+      submittedAt: 'Submitted',
+      totalCost: 'Total Cost',
+      leadTime: 'Lead Time'
+    },
+    submittedOrders: 'Submitted Orders',
+    submittedOrdersDescription: 'Restocking orders placed from the Restocking tab. Filters do not apply to this section.',
+    noSubmittedOrders: 'No restocking orders have been submitted yet.',
+    leadTimeDays: '{days} days'
   },
 
   // Finance/Spending
@@ -188,6 +196,42 @@ export default {
     }
   },
 
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Set a budget and restock the items with the largest forecast shortfall',
+    budget: 'Available Budget',
+    budgetHint: 'Items are filled in order of urgency until the budget runs out. Untick an item to skip it.',
+    allocated: 'Allocated',
+    remaining: 'Remaining',
+    itemsSelected: 'Items in Order',
+    fullRestockCost: 'Full restock cost: {amount}',
+    recommendations: 'Recommended Items',
+    noRecommendations: 'All forecast items have enough stock for the next period.',
+    placeOrder: 'Place Order',
+    placingOrder: 'Placing Order...',
+    orderPlaced: 'Order {orderNumber} submitted. Expected delivery in {days} days.',
+    viewInOrders: 'View in Orders',
+    orderFailed: 'Could not submit the order. Please try again.',
+    loadFailed: 'Failed to load restocking recommendations.',
+    notInBudget: 'Not in budget',
+    leadTimeDays: '{days} days',
+    table: {
+      include: 'Include',
+      item: 'Item',
+      category: 'Category',
+      trend: 'Trend',
+      onHand: 'On Hand',
+      onOrder: 'On Order',
+      forecast: 'Forecast',
+      recommended: 'Recommended',
+      allocated: 'Order Qty',
+      unitCost: 'Unit Cost',
+      lineCost: 'Line Cost',
+      leadTime: 'Lead Time'
+    }
+  },
+
   // Filters
   filters: {
     timePeriod: 'Time Period',
@@ -206,7 +250,8 @@ export default {
     backordered: 'Backordered',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
-    adequate: 'Adequate'
+    adequate: 'Adequate',
+    submitted: 'Submitted'
   },
 
   // Trends
@@ -229,7 +274,11 @@ export default {
     sensors: 'Sensors',
     actuators: 'Actuators',
     controllers: 'Controllers',
-    powerSupplies: 'Power Supplies'
+    powerSupplies: 'Power Supplies',
+    mechanicalParts: 'Mechanical Parts',
+    motors: 'Motors',
+    filtration: 'Filtration',
+    valves: 'Valves'
   },
 
   // Spending Categories
